@@ -147,7 +147,7 @@ export default function TahsinPortfolio() {
               <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.6 }}>
                 <p className="text-[12px] uppercase tracking-[0.3em] text-neutral-500">Engineering Executive • EEE • Energy Systems</p>
                 <h1 className="mt-6 max-w-4xl text-5xl font-normal leading-[1.02] tracking-tight text-neutral-950 md:text-7xl">
-                  Building technical systems across energy, biochar, and net-zero innovation.
+                  Builder. Designer. Problem solver.
                 </h1>
                 <p className="mt-8 max-w-2xl text-[18px] leading-8 text-neutral-700">
                   Engineering Executive with a background in Electrical and Electronic Engineering, current MBA studies at IBA, and experience spanning power-plant planning, biochar operations, scientific publishing, and applied technical research.
@@ -178,9 +178,7 @@ export default function TahsinPortfolio() {
               >
                 <div className="relative h-[360px] w-[280px] overflow-hidden rounded-[2rem] border border-black/10 bg-white/70 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.05),transparent_45%)]" />
-                  <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.25em] text-neutral-400">
-                    Portrait
-                  </div>
+                  <img src="/portrait.jpg" alt="Tahsin Saad Choudhury" className="w-full h-full object-cover rounded-[1.5rem]" />
                 </div>
               </motion.div>
             </div>
