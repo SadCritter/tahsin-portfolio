@@ -150,7 +150,7 @@ export default function TahsinPortfolio() {
                   Builder. Designer. Problem solver.
                 </h1>
                 <p className="mt-8 max-w-2xl text-[18px] leading-8 text-neutral-700">
-                  Engineering Executive with a background in Electrical and Electronic Engineering, current MBA studies at IBA, and experience spanning power-plant planning, biochar operations, scientific publishing, and applied technical research.
+                  Engineering Executive with a background in Electrical and Electronic Engineering, current MBA studies at IBA, and experience spanning power-plant planning, designing, and applied technical research.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a href="#projects" className="inline-flex items-center gap-2 rounded-full border border-neutral-900 bg-neutral-900 px-6 py-3 text-sm text-white transition hover:-translate-y-0.5">
