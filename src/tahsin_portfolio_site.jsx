@@ -22,7 +22,11 @@ export default function TahsinPortfolio() {
           outcome:
             "Produced an undergraduate thesis that connected communication engineering concepts with a practical real-world use case in irrigation technology.",
         },
-        galleryPlaceholders: ["System architecture image", "Implementation photo", "Block diagram / result chart"],
+       galleryImages: [
+            { src: "/thesis-1.png", alt: "LoRa network architecture" },
+            { src: "/thesis-2.png", alt: "Irrigation control workflow" },
+            { src: "/thesis-3.png", alt: "LoRa signal analysis" },
+          ],
       },
       {
         title: "Self-Balancing Drone",
@@ -41,7 +45,11 @@ export default function TahsinPortfolio() {
           outcome:
             "Delivered a working prototype that demonstrates hands-on engineering capability and rapid prototyping skills.",
         },
-        galleryPlaceholders: ["Prototype photo", "Assembly image", "Component layout / testing image"],
+        galleryImages: [
+          { src: "/drone-1.jpg", alt: "Drone prototype viewed from above" },
+          { src: "/drone-2.jpg", alt: "Drone assembly and landing supports" },
+          { src: "/drone-3.jpg", alt: "Drone frame and control electronics" },
+        ],
       },
       {
         title: "Detecting Emotions from EEG Signals",
@@ -60,7 +68,11 @@ export default function TahsinPortfolio() {
           outcome:
             "Produced a project that combined neuroscience-adjacent signal analysis with computational pattern recognition.",
         },
-        galleryPlaceholders: ["EEG setup image", "Signal plot / chart", "Workflow or model diagram"],
+        galleryImages: [
+          { src: "/eeg-1.jpg", alt: "Base EEG signal" },
+          { src: "/eeg-2.jpg", alt: "Normalized EEG signal" },
+          { src: "/eeg-3.jpg", alt: "EEG signals after bandpass filtering" },
+        ],
       },
     ],
     []
@@ -147,10 +159,10 @@ export default function TahsinPortfolio() {
               <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.6 }}>
                 <p className="text-[12px] uppercase tracking-[0.3em] text-neutral-500">Engineering Executive • EEE • Energy Systems</p>
                 <h1 className="mt-6 max-w-4xl text-5xl font-normal leading-[1.02] tracking-tight text-neutral-950 md:text-7xl">
-                  Building technical systems across energy, biochar, and net-zero innovation.
+                  Builder. Designer. Problem solver.
                 </h1>
                 <p className="mt-8 max-w-2xl text-[18px] leading-8 text-neutral-700">
-                  Engineering Executive with a background in Electrical and Electronic Engineering, current MBA studies at IBA, and experience spanning power-plant planning, biochar operations, scientific publishing, and applied technical research.
+                  Engineering Executive with a background in Electrical and Electronic Engineering, current MBA studies at IBA, and experience spanning power-plant planning, designing, and applied technical research.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a href="#projects" className="inline-flex items-center gap-2 rounded-full border border-neutral-900 bg-neutral-900 px-6 py-3 text-sm text-white transition hover:-translate-y-0.5">
@@ -178,9 +190,7 @@ export default function TahsinPortfolio() {
               >
                 <div className="relative h-[360px] w-[280px] overflow-hidden rounded-[2rem] border border-black/10 bg-white/70 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.05),transparent_45%)]" />
-                  <div className="flex h-full items-center justify-center text-sm uppercase tracking-[0.25em] text-neutral-400">
-                    Portrait
-                  </div>
+                  <img src="/portrait.jpg" alt="Tahsin Saad Choudhury" className="w-full h-full object-cover rounded-[1.5rem]" />
                 </div>
               </motion.div>
             </div>
@@ -258,9 +268,7 @@ export default function TahsinPortfolio() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} variants={fadeUp} transition={{ duration: 0.55 }}>
             <p className="text-[12px] uppercase tracking-[0.3em] text-neutral-500">Projects</p>
             <h2 className="mt-3 text-[34px] tracking-tight text-neutral-950 md:text-[46px]">Selected Technical Work</h2>
-            <p className="mt-4 max-w-3xl text-[16px] leading-8 text-neutral-700">
-              Click a project to open a detailed panel. You can later replace the placeholders with final images, diagrams, and expanded technical content.
-            </p>
+            <p className="mt-4 max-w-3xl text-[16px] leading-8 text-neutral-700">            </p>
           </motion.div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
@@ -309,18 +317,20 @@ export default function TahsinPortfolio() {
               <h3 className="mt-3 text-[30px] leading-tight tracking-tight text-neutral-950">{selectedProject.title}</h3>
               <p className="mt-2 text-[15px] text-neutral-500">{selectedProject.year}</p>
 
-              <div className="mt-8 grid gap-6 rounded-[1.5rem] border border-dashed border-black/15 bg-[#f8f5ef] p-5 md:grid-cols-3">
-                {selectedProject.galleryPlaceholders.map((item) => (
-                  <div
-                    key={item}
-                    className="flex min-h-[150px] items-center justify-center rounded-[1.25rem] border border-black/10 bg-white text-center text-sm leading-6 text-neutral-400"
-                  >
-                    <div>
-                      <ImageIcon className="mx-auto mb-3 h-5 w-5" />
-                      {item}
-                    </div>
-                  </div>
-                ))}
+              <div className="mt-8 grid gap-6 rounded-[1.5rem] border border-black/15 bg-[#f8f5ef] p-5 md:grid-cols-3">
+                {selectedProject.galleryImages.map((image) => (
+                  <a
+                    key={image.src}
+                    href={image.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block overflow-hidden rounded-[1.25rem] border border-black/10 bg-white"
+                    aria-label={`Open full-size image: ${image.alt}`}>
+                  <img
+                     src={image.src}
+                     alt={image.alt}
+                     loading="lazy"
+                     className="h-[150px] w-full object-contain"/> </a>))}
               </div>
 
               <div className="mt-8 space-y-6">
