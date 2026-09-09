@@ -74,7 +74,7 @@ export default function TahsinPortfolio() {
     {
       role: "Engineering Executive (EEE)",
       company: "B&F Company Ltd.",
-      period: "2025 – Present",
+      period: "2026 – Present",
       details: [
         "Design and plan power plants for future projects.",
         "Maintain and plan services for an existing biochar plant.",
@@ -84,7 +84,7 @@ export default function TahsinPortfolio() {
     {
       role: "Editor (Sciences)",
       company: "Joykoly Publications Ltd.",
-      period: "2024 – 2025",
+      period: "2025 – 2026",
       details: [
         "Worked on preparing and checking science books and study materials.",
         "Contributed to publications for job preparation and university admission exams.",
